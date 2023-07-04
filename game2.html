@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>xin chào bạn đến với trò chơi adm</p>  <br>
+    <button onclick="game()">Chơi</button>
+
+    <script>
+function game(){
+    let maxNumber = parseInt(prompt("Nhập vào số lớn nhất trong khoảng muốn đoán:"));
+let randomNumber = Math.floor(Math.random() * maxNumber);
+let guess;
+
+do {
+  guess = parseInt(prompt("Nhập vào số bạn đoán:"));
+
+  if (guess === randomNumber) {
+    alert("Chúc mừng! Bạn đã đoán đúng!");
+    break;
+  } else if (guess < randomNumber) {
+    alert("Số bạn đoán nhỏ hơn số ngẫu nhiên. Hãy đoán lại!");
+  } else {
+    alert("Số bạn đoán lớn hơn số ngẫu nhiên. Hãy đoán lại!");
+  }
+} while (true);
+}
+    </script>
+</body>
+</html>
